@@ -18,7 +18,7 @@ public class TwoSum
 
             int balance = target - nums[i];
 
-            // §ï¥Î Dictionary ´î¤Ö¤@­Ó for °j°é
+            // æ”¹ç”¨ Dictionary æ¸›å°‘ä¸€å€‹ for è¿´åœˆ
             if (numDictionary.ContainsKey(balance))
             {
                 result[0] = i;
@@ -29,7 +29,7 @@ public class TwoSum
             numDictionary.TryAdd(nums[i], i);
         }
 
-        // old ¼gªk
+        // old å¯«æ³•
         //for (int i = 0; i < nums.Length - 1; i++)
         //{
         //    for (int j = i + 1; j < nums.Length; j++)
