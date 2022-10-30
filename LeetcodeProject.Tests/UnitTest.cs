@@ -16,4 +16,30 @@ public class Tests
         var result = TwoSum.Get_TwoSum(nums, target);
         Assert.AreEqual(result, expected);
     }
+
+    [Test]
+    public void AddTwoNumbers_Success()
+    {
+        ListNode l1_1 = new ListNode(2);
+        ListNode l1_2 = new ListNode(4);
+        l1_1.next = l1_2;
+        ListNode l1_3 = new ListNode(3);
+        l1_2.next = l1_3;
+
+        ListNode l2_1 = new ListNode(5);
+        ListNode l2_2 = new ListNode(6);
+        l2_1.next = l2_2;
+        ListNode l2_3 = new ListNode(4);
+        l2_2.next = l2_3;
+
+        var result = AddTwoNumbers.Get_AddTwoNumbers(l1_1, l2_1);
+
+        ListNode result_1 = new ListNode(7);
+        ListNode result_2 = new ListNode(0);
+        result_1.next = result_2;
+        ListNode result_3 = new ListNode(8);
+        result_2.next = result_3;
+
+        Assert.AreEqual(result, result_1);
+    }
 }
