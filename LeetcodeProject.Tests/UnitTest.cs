@@ -42,4 +42,15 @@ public class Tests
 
         Assert.AreEqual(result, result_1);
     }
+
+    [TestCase("abcabcbb", 3)]
+    [TestCase("bbbbb", 1)]
+    [TestCase("pwwkew", 3)]
+    [TestCase(" ", 1)]
+    [TestCase("dvdf", 3)]
+    public void LengthOfLongestSubstring_Success(string s, int expected)
+    {
+        var result = LongestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring(s);
+        Assert.AreEqual(result, expected);
+    }
 }
