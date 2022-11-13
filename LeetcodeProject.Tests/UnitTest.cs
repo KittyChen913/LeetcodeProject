@@ -53,4 +53,12 @@ public class Tests
         var result = LongestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring(s);
         Assert.AreEqual(result, expected);
     }
+
+    [TestCase("babad", "bab")]
+    [TestCase("cbbd", "bb")]
+    public void LongestPalindrome_Success(string s, string expected)
+    {
+        var result = LongestPalindromicSubstring.LongestPalindrome(s);
+        Assert.AreEqual(result, expected);
+    }
 }
