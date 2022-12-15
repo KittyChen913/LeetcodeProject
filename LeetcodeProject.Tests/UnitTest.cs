@@ -56,6 +56,8 @@ public class Tests
 
     [TestCase("babad", "bab")]
     [TestCase("cbbd", "bb")]
+    [TestCase("racecar", "racecar")]
+    [TestCase("aacabdkacaa", "aca")]
     public void LongestPalindrome_Success(string s, string expected)
     {
         var result = LongestPalindromicSubstring.LongestPalindrome(s);
