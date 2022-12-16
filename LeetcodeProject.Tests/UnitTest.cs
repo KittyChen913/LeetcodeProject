@@ -67,6 +67,8 @@ public class Tests
     [TestCase(123, 321)]
     [TestCase(-123, -321)]
     [TestCase(120, 21)]
+    [TestCase(1534236469, 0)]
+    [TestCase(-2147483648, 0)]
     public void Reverse_Success(int x, int expected)
     {
         var result = ReverseInteger.Reverse(x);
