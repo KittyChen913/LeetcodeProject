@@ -74,4 +74,13 @@ public class Tests
         var result = ReverseInteger.Reverse(x);
         Assert.AreEqual(result, expected);
     }
+
+    [TestCase("42", 42)]
+    [TestCase("   -42", -42)]
+    [TestCase("4193 with words", 4193)]
+    public void MyAtoi(string s, int expected)
+    {
+        var result = StringToInteger.MyAtoi(s);
+        Assert.AreEqual(result, expected);
+    }
 }
