@@ -63,4 +63,13 @@ public class Tests
         var result = LongestPalindromicSubstring.LongestPalindrome(s);
         Assert.AreEqual(result, expected);
     }
+
+    [TestCase(123, 321)]
+    [TestCase(-123, -321)]
+    [TestCase(120, 21)]
+    public void Reverse_Success(int x, int expected)
+    {
+        var result = ReverseInteger.Reverse(x);
+        Assert.AreEqual(result, expected);
+    }
 }
