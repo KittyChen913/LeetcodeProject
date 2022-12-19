@@ -78,6 +78,13 @@ public class Tests
     [TestCase("42", 42)]
     [TestCase("   -42", -42)]
     [TestCase("4193 with words", 4193)]
+    [TestCase("2147483648  over max value ", 2147483647)]
+    [TestCase("words and 987", 0)]
+    [TestCase("+-12", 0)]
+    [TestCase("00000-42a1234", 0)]
+    [TestCase("20000000000000000000", 2147483647)]
+    [TestCase("-abc", 0)]
+    [TestCase("-5-", -5)]
     public void MyAtoi(string s, int expected)
     {
         var result = StringToInteger.MyAtoi(s);
