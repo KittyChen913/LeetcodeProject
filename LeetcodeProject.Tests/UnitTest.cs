@@ -85,9 +85,17 @@ public class Tests
     [TestCase("20000000000000000000", 2147483647)]
     [TestCase("-abc", 0)]
     [TestCase("-5-", -5)]
-    public void MyAtoi(string s, int expected)
+    public void MyAtoi_Success(string s, int expected)
     {
         var result = StringToInteger.MyAtoi(s);
+        Assert.AreEqual(result, expected);
+    }
+
+    [TestCase(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }, 49)]
+    [TestCase(new int[] { 1, 1 }, 1)]
+    public void MaxArea_Success(int[] height, int expected)
+    {
+        var result = ContainerWithMostWater.MaxArea(height);
         Assert.AreEqual(result, expected);
     }
 }
