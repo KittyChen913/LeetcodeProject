@@ -4,7 +4,7 @@ public class LongestPalindromicSubstring
 {
     /// <summary>
     /// 5. Longest Palindromic Substring
-    /// 改成由中間往外擴展的判定方式，可以減少一半的判定次數
+    /// 雙指針算法，由中間往外擴展的判定方式，可以減少一半的判定次數
     /// </summary>
     /// <param name="s"></param>
     /// <returns></returns>
