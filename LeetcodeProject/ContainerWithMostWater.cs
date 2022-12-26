@@ -4,12 +4,30 @@ public class ContainerWithMostWater
 {
     /// <summary>
     /// 11. Container With Most Water
+    /// 雙指針算法，與 5# 不同之處在於它指針是由外往內的判定方式
     /// </summary>
     /// <param name="height"></param>
     /// <returns></returns>
     public static int MaxArea(int[] height)
     {
-        return 0;
+        var finalMaxArea = 0;
+        int leftPointer = 0, rightPointer = height.Length - 1;
+
+        while (leftPointer < rightPointer)
+        {
+            // 一旦 2 個指針重疊就出去了
+            if (height[leftPointer] < height[rightPointer])
+            {
+                finalMaxArea = Math.Max(finalMaxArea, (rightPointer - leftPointer) * height[leftPointer]);
+                leftPointer++;  // 如果 left 指針比較小，就再往內一格
+            }
+            else
+            {
+                finalMaxArea = Math.Max(finalMaxArea, (rightPointer - leftPointer) * height[rightPointer]);
+                rightPointer--; // 如果 right 指針比較小，就再往內一格
+            }
+        }
+        return finalMaxArea;
     }
 
     /// <summary>
