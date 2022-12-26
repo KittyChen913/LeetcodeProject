@@ -98,4 +98,12 @@ public class Tests
         var result = ContainerWithMostWater.MaxArea(height);
         Assert.AreEqual(result, expected);
     }
+
+    [TestCase(new int[] { 2, 3, 1, 1, 4 }, true)]
+    [TestCase(new int[] { 3, 2, 1, 0, 4 }, false)]
+    public void CanJump_Success(int[] nums, bool expected)
+    {
+        var result = JumpGame.CanJump(nums);
+        Assert.AreEqual(result, expected);
+    }
 }
