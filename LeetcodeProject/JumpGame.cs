@@ -39,18 +39,19 @@
                     }
                     else
                     {
+                        // 如果不能再減了，就代表這個項目能走的步數都嘗試完了，就繼續 try 下一個項目
                         startIndex++;
                     }
                     maxIndex = Math.Max(maxIndex, jumpIndex);
                     return CanJump(nums, startIndex, maxIndex);
                 }
 
-                // 為了怕超出邊界，最多就 length -1 
+                // 為了怕超出邊界，超出去的最多就等於 length -1
                 jumpIndex = (jumpIndex + nums[jumpIndex] > nums.Length - 1) ? nums.Length - 1 : jumpIndex + nums[jumpIndex];
             }
 
             // 如果索引並不是停在最後一個項目，就回傳 false，反之如果他成功走到最後一個項目，就回傳 true
-            return (!jumpIndex.Equals(nums.Length - 1)) ? false : true;
+            return jumpIndex.Equals(nums.Length - 1);
         }
     }
 }
