@@ -112,4 +112,11 @@ public class Tests
         var result = JumpGame.CanJump(nums);
         Assert.AreEqual(result, expected);
     }
+
+    [TestCase("III", 3)]
+    public void RomanToInt_Success(string s, int expected)
+    {
+        var result = RomantoInteger.RomanToInt(s);
+        Assert.AreEqual(result, expected);
+    }
 }
