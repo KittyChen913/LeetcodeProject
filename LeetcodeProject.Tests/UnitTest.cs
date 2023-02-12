@@ -114,6 +114,8 @@ public class Tests
     }
 
     [TestCase("III", 3)]
+    [TestCase("LVIII", 58)]
+    [TestCase("MCMXCIV", 1994)]
     public void RomanToInt_Success(string s, int expected)
     {
         var result = RomantoInteger.RomanToInt(s);
