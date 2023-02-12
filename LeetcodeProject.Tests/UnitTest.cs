@@ -121,4 +121,11 @@ public class Tests
         var result = RomantoInteger.RomanToInt(s);
         Assert.AreEqual(result, expected);
     }
+
+    [TestCase(new string[] { "flower", "flow", "flight" }, "fl")]
+    public void LongestCommonPrefix_Success(string[] strs, string expected)
+    {
+        var result = LongestCommonPrefix.Longest_Common_Prefix(strs);
+        Assert.AreEqual(result, expected);
+    }
 }
