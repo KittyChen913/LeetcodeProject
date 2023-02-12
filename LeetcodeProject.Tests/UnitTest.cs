@@ -123,6 +123,12 @@ public class Tests
     }
 
     [TestCase(new string[] { "flower", "flow", "flight" }, "fl")]
+    [TestCase(new string[] { "dog", "racecar", "car" }, "")]
+    [TestCase(new string[] { "" }, "")]
+    [TestCase(new string[] { "", "" }, "")]
+    [TestCase(new string[] { "", "b" }, "")]
+    [TestCase(new string[] { "ab", "a" }, "a")]
+    [TestCase(new string[] { "cir", "car" }, "c")]
     public void LongestCommonPrefix_Success(string[] strs, string expected)
     {
         var result = LongestCommonPrefix.Longest_Common_Prefix(strs);
